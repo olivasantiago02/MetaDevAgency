@@ -1,0 +1,430 @@
+/* Estilos para el header */
+header {
+    background-color: #333; /* Cambia el color de fondo según tus preferencias */
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+    border-radius: 20px;
+}
+
+.header-container {
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.brand-name {
+    font-size: 33px; /* Tamaño de fuente para el nombre de la marca */
+    margin: 0; /* Elimina el margen predeterminado para el encabezado */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas para un aspecto más llamativo */
+    letter-spacing: 2px; /* Añade un espaciado entre letras para un aspecto audaz */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil al texto */
+}
+
+
+/* Estilos para los enlaces con forma de burbuja */
+.brand-links {
+    text-align: center;
+    margin-top: 10px; /* Espaciado superior entre el título y los enlaces */
+}
+
+.bubble-link {
+    display: inline-block;
+    background-color: #007BFF; /* Cambia el color de fondo según tus preferencias */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px; /* Ajusta el espaciado interno según tus preferencias */
+    border-radius: 30px; /* Esto crea la forma de burbuja alargada */
+    margin: 10px; /* Espaciado entre enlaces */
+    transition: background-color 0.3s ease; /* Añade una animación de transición */
+}
+
+.bubble-link:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilos para la imagen de fondo del logo */
+.logo-container {
+    background-image: url('../images/2.png'); /* Ruta de tu imagen de logo */
+    background-size: auto 100%; /* Ancho automático, altura 100% */
+    background-repeat: repeat-x; /* Repite horizontalmente */
+    background-position: center; /* Centra la imagen en el contenedor */
+    height: 70vh; /* Establece la altura al 100% del viewport height (altura de la ventana del navegador) */
+    position: relative;
+}
+
+.logo-container img {
+    display: none; /* Puedes ocultar la imagen si solo deseas mostrar la imagen de fondo */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición al centro */
+    background-color: white; /* Color del cuadro blanco */
+    padding: 70px; /* Ajusta el espaciado dentro del cuadro blanco */
+    border-radius: 20px;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.overlay p {
+    font-size: 24px; /* Tamaño de fuente para la frase */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para el video de fondo */
+.background-video {
+    
+    transform: translate(10%, 3%); /* Ajusta la posición al centro */
+    width: 80%; /* Ajusta el ancho del video según tus preferencias */
+    height: 0%; /* Ajusta la altura del video según tus preferencias */
+    z-index: -1; /* Coloca el video detrás de los demás elementos, pero por encima del fondo */
+    border: 10px solid black; /* Agrega un borde de color negro */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Agrega sombras alrededor del video */
+}
+
+/* Estilos para la sección Visión y Misión */
+.vision-mission {
+    background-color: #f9f9f9; /* Cambia el color de fondo según tus preferencias */
+    padding: 40px 0; /* Espaciado interno superior e inferior */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.container {
+    max-width: 1200px; /* Establece un ancho máximo para el contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente en la página */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilos para las "cards" individuales */
+.vision-card-1 {
+    background-color: rgb(71, 55, 159);
+    border: 1px solid #e0e0e0; /* Borde */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.vision-card-2 {
+    background-color: #773d84; /* Color de fondo de la segunda "card" */
+    border: 1px solid #e0e0e0; /* Borde */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+h2 {
+    font-size: 28px; /* Tamaño de fuente para los encabezados */
+    color: #f6efef; /* Cambia el color del texto según tus preferencias */
+}
+
+p {
+    font-size: 18px; /* Tamaño de fuente para el texto */
+    color: #fbfbfb; /* Cambia el color del texto según tus preferencias */
+}
+
+/* Estilos para el título de los servicios de desarrollo web */
+.service-title {
+    text-align: center; /* Centra el contenido horizontalmente */
+    background: linear-gradient(135deg, rgba(63, 41, 190, 0.711), #773d84); /* Fondo de tipo burbuja con colores */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.service-title h1 {
+    font-size: 36px; /* Tamaño de fuente para el título */
+    color: #fff; /* Color del texto */
+    margin: 0; /* Elimina el margen superior e inferior del título */
+}
+
+.service-title p {
+    font-size: 19px; /* Tamaño de fuente para el encabezado breve */
+    color: #fff; /* Color del texto */
+    margin: 0; /* Elimina el margen superior e inferior del encabezado breve */
+}
+
+/* Estilos para las tarjetas de servicios */
+.service-plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: calc(33.33% - 20px); /* Para que haya espacio entre las tarjetas */
+}
+
+.service-card h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-card ul li {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la sección de proceso */
+.process-section {
+    text-align: center;
+    padding: 30px;
+}
+
+.process-section h2{
+    color: #333;
+}
+
+.process-step {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.process-step img {
+    width: 50px;
+    height: 50px;
+}
+
+.process-step h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.process-step p {
+    font-size: 18px;
+    color: #333;
+}
+
+.software-development-section {
+    background-color: #252627; /* Cambia el color de fondo según tus preferencias */
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+    padding: 50px 0; /* Espaciado interno superior e inferior */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.section-title {
+    font-size: 38px; /* Tamaño de fuente para el título */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas para un aspecto más audaz */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil al texto */
+    margin-bottom: 20px; /* Espaciado inferior del título */
+}
+
+.programming-languages {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.language {
+    width: 9%; /* Ancho de cada logo de lenguaje */
+    margin: 12px;
+    opacity: 0.5; /* Opacidad inicial para que los logos sean semi-transparentes */
+    transition: opacity 0.3s ease; /* Agrega una animación de transición */
+}
+
+/* Agregar estilos a los logos de los lenguajes, como tamaños, colores, etc. */
+.language img {
+    width: 100%;
+}
+
+/* Estilos para los logos cuando el usuario hace scroll */
+.active-language {
+    opacity: 3; /* Opacidad completa para resaltar el logo */
+}
+
+/* Estilos para los servicios de software */
+.software-services {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.653);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 2rem;
+    text-align: center;
+    width: 30%;
+}
+
+.card h3 {
+    font-size: 25px;
+    font-family: "Arial", sans-serif;
+    color: #333;
+}
+
+.card p {
+    font-size: 18px;
+    color: #000000;
+}
+
+.btn-more-info {
+    background-color: #007BFF; /* Cambia el color de fondo según tus preferencias */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-more-info:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.video-editing-section {
+    margin-top: 2rem;
+    background-color: rgba(225, 166, 18, 0.794);
+    border-radius: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff; /* Cambia el color del texto según tus preferencias */
+}
+
+.video-editing-header {
+    text-align: center;
+    padding: 60px; /* Ajusta el espaciado según tus preferencias */
+}
+
+.video-editing-header h2 {
+    font-size: 36px; /* Tamaño de fuente del título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega sombras al texto del título */
+}
+
+.video-editing-header p {
+    font-size: 21px;
+}
+
+.video-editing-tools {
+    text-align: center;
+    margin-top: 0px; /* Ajusta el espaciado según tus preferencias */
+}
+
+.tool {
+    display: inline-block;
+}
+
+.tool img {
+    width: 20%; /* Ajusta el tamaño del icono según tus preferencias */
+}
+
+.video-editing-services h2 {
+    color: #000000;
+    background-color: burlywood;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+
+.video-editing-services {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.service-cardv {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-cardv h3 {
+    color: #000000;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.service-cardv p {
+    font-size: 18px;
+    color: #514c4c;
+}
+
+.btn-service {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-service:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    background-color: #333; /* Cambia el color de fondo según tus preferencias */
+    color: #fff; /* Texto blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    font-size: 24px;
+}
+
+.social-icons a {
+    color: #fff; /* Iconos de redes sociales en blanco */
+    margin-right: 10px;
+}
+
+.company-info p {
+    margin: 5px 0;
+}
+
+.company-info a {
+    color: #fff; /* Enlace de teléfono en blanco */
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 50px; /* Ajusta el tamaño de las imágenes según tus preferencias */
+    height: 50px;
+    margin-right: 10px; /* Espaciado entre las imágenes y los enlaces */
+}
