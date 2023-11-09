@@ -429,64 +429,115 @@ p {
     margin-right: 10px; /* Espaciado entre las imágenes y los enlaces */
 }
 
+/* Estilos para el botón hamburguesa */
+.menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    display: none; /* Ocultar el botón en pantallas grandes */
+}
+
 /* Estilos generales para dispositivos con un ancho mínimo de 768px o más */
-@media (min-width: 768px) {
+@media screen and (max-width: 780px) {
     body{
         margin: 0;
         padding: 0;
     }
 
-    .brand-name{
-        font-size: 4rem; /* Tamaño de fuente para el nombre de la marca */
-        margin: 0; /* Elimina el margen predeterminado para el encabezado */
-        text-transform: uppercase; /* Convierte el texto a mayúsculas para un aspecto más llamativo */
-        letter-spacing: 7px; /* Añade un espaciado entre letras para un aspecto audaz */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.944); /* Agrega una sombra sutil al texto */
+    .brand-name {
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra sutil al texto en dispositivos móviles */
     }
-
+    
     .brand-links {
-        text-align: center;
-        margin-top: 15px; /* Espaciado superior entre el título y los enlaces */
+        position: relative;
     }
 
-    .brand-links a {
-        font-size: 1.7rem;
-        margin-top: 0.8rem;
-    }
-    
-    .bubble-link {
-        display: inline-block;
-        background-color: rgba(31, 197, 28, 0.685); /* Cambia el color de fondo según tus preferencias */
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        padding: 10px 20px; /* Ajusta el espaciado interno según tus preferencias */
-        border-radius: 30px; /* Esto crea la forma de burbuja alargada */
-        margin: 10px; /* Espaciado entre enlaces */
-        transition: background-color 0.3s ease; /* Añade una animación de transición */
-        width: 11rem;
-        height: 2rem;
-    }
-    
-    .bubble-link:hover {
-        background-color: rgba(31, 197, 28, 0.685); /* Cambia el color de fondo al pasar el mouse */
+    .menu-toggle {
+        margin-top: 1rem;
+        color: rgb(50, 123, 219);
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        margin-left: 45%;
+        cursor: pointer;
     }
 
-    .overlay{
-            position: absolute;
-            top: 50%; /* Centra verticalmente */
-            left: 50%; /* Centra horizontalmente */
-            transform: translate(-50%, -50%); /* Ajusta la posición al centro */
-            background-color: white; /* Color del cuadro blanco */
-            padding: 90px; /* Ajusta el espaciado dentro del cuadro blanco */
-            border-radius: 20px;
-            text-align: center; /* Centra el texto horizontalmente */
-        }
-        
+    .menu-toggle::before,
+    .menu-toggle::after {
+        content: '';
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-toggle::before {
+        transform: translateY(-8px);
+    }
+
+    .menu-toggle::after {
+        transform: translateY(4px);
+    }
+
+    .bubble-link{
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px; /* Ajusta el espaciado interno según tus preferencias */
+    border-radius: 30px; /* Esto crea la forma de burbuja alargada */
+    margin: 10px; /* Espaciado entre enlaces */
+    transition: background-color 0.3s ease; /* Añade una animación de transición */
+
+    }
+
+    .brand-links.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+    }
+
+    .brand-links.show a {
+        margin: 10px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s, transform 0.5s, color 0.5s;
+    }
+
+    .brand-links.show a:nth-child(1) { transition-delay: 0.2s; }
+    .brand-links.show a:nth-child(2) { transition-delay: 0.4s; }
+    .brand-links.show a:nth-child(3) { transition-delay: 0.6s; }
+
+    .brand-links.show a.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu-toggle.active + .brand-links.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .overlay {
+        padding: 20px; /* Reduzco el espaciado para dispositivos móviles */
+    }
+
     .overlay p {
-            font-size: 30px; /* Tamaño de fuente para la frase */
-            color: #000000; /* Color del texto */
-        }
+        font-size: 18px; /* Ajusto el tamaño de la fuente para dispositivos móviles */
+    }
 
     /* Estilos para el video de fondo */
 .background-video {
@@ -499,81 +550,117 @@ p {
 }
 
 /* Estilos para las "cards" individuales */
+
+.container {
+    display: block;
+    width: 100%; /* Ocupa el 100% del ancho en pantallas más pequeñas */
+    margin-bottom: 20px; /* Añade espacio entre las tarjetas en pantallas más pequeñas */
+}
+
 .vision-card-1 {
-    background-color: rgb(71, 55, 159);
-    border: 1px solid #e0e0e0; /* Borde */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-.vision-card-2 {
-    background-color: #773d84; /* Color de fondo de la segunda "card" */
-    border: 1px solid #e0e0e0; /* Borde */
-    padding: 45px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-h2 {
-    font-size: 30px; /* Tamaño de fuente para los encabezados */
-    color: #f6efef; /* Cambia el color del texto según tus preferencias */
-}
-
-p {
-    font-size: 20px; /* Tamaño de fuente para el texto */
-    color: #fbfbfb; /* Cambia el color del texto según tus preferencias */
+    order: 2; /* Cambia el orden en pantallas más pequeñas para que Vision esté debajo de Misión */
 }
 
 /* Estilos para las tarjetas de servicios */
-.service-plans {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 80px;
-    margin-top: 2rem;
-}
-
 .service-card {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.668);
-    text-align: center;
-    width: calc(33.33% - 20px); /* Para que haya espacio entre las tarjetas */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
 }
 
+/* Estilos específicos para los elementos dentro de las service-card en pantallas más pequeñas */
 .service-card h2 {
-    font-size: 30px;
-    color: #000000;
+    font-size: 1.5rem; /* Tamaño de fuente para los títulos */
 }
 
 .service-card ul {
-    list-style: none;
-    padding: 0;
+    padding-left: 20px; /* Añade un espacio a la izquierda para los elementos de la lista */
 }
 
-.service-card ul li {
-    text-align: left;
-    margin: 10px 0;
-    font-size: 1.5rem;
-    color: #000000ce;
+.service-card a {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centra el texto en el enlace */
+    margin-top: 14px; /* Añade espacio en la parte superior del enlace */
 }
 
-.btn {
-    display: grid;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Estilos generales para todas las service-cards */
+.service-card {
+    border: 2px solid #ddd; /* Borde común a todas las tarjetas */
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+    padding: 15px; /* Espaciado interno de la tarjeta */
 }
 
-.btn:hover {
-    background-color: #0056b3;
+/* Estilos específicos para el primer plan (índice 1) */
+.service-card:nth-child(1) {
+    background-color: #e6ffe6; /* Color de fondo para el primer plan */
+}
+
+/* Estilos específicos para el segundo plan (índice 2) */
+.service-card:nth-child(2) {
+    background-color: #e6f7ff; /* Color de fondo para el segundo plan */
+}
+
+/* Estilos específicos para el tercer plan (índice 3) */
+.service-card:nth-child(3) {
+    background-color: rgba(203, 211, 61, 0.727); /* Color de fondo para el tercer plan */
+}
+
+.service-card:nth-child(4) {
+    background-color: #206bdc98; /* Color de fondo para el tercer plan */
+}
+
+.service-card:nth-child(5) {
+    background-color: #ffeee6; /* Color de fondo para el tercer plan */
+}
+
+.software-development-section {
+    text-align: center; /* Alinea el contenido al centro */
+    border-radius: 1rem;
+}
+
+.programming-languages {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.language {
+    width: 50px; /* Ajusta el ancho de cada ícono según tus necesidades */
+    margin: 10px; /* Espaciado entre íconos */
+}
+
+/* Estilos adicionales para los íconos, como bordes redondeados */
+.language img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor de los íconos */
+}
+
+.software-services {
+    flex-direction: column; /* Cambia a una disposición de columna en pantallas más pequeñas */
+}
+
+.card {
+    width: 85%; /* Ocupa todo el ancho disponible en pantallas más pequeñas */
+    margin-bottom: 20px; /* Añade espacio entre las tarjetas en pantallas más pequeñas */
+}
+
+/* Asigna colores diferentes a cada tarjeta */
+.card:nth-child(1) {
+    background-color: #ffcccb; /* Color de fondo para la primera tarjeta */
+}
+
+.card:nth-child(2) {
+    background-color: #c2f0c2; /* Color de fondo para la segunda tarjeta */
+}
+
+.card:nth-child(3) {
+    background-color: #b3e0ff; /* Color de fondo para la tercera tarjeta */
+}
+
+.card:nth-child(4) {
+    background-color: #ffd699; /* Color de fondo para la cuarta tarjeta */
 }
 
 
