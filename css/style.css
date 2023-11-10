@@ -444,8 +444,14 @@ p {
         padding: 0;
     }
 
+    header{
+        border-radius: unset;
+        background-color: rgba(222, 184, 135, 0.214);
+    }
+
     .brand-name {
         text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* Añade una sombra sutil al texto en dispositivos móviles */
+        color: #343232;
     }
     
     .brand-links {
@@ -454,11 +460,11 @@ p {
 
     .menu-toggle {
         margin-top: 1rem;
-        color: rgb(50, 123, 219);
+        color: rgb(25, 26, 26);
         display: block;
         width: 40px;
         height: 40px;
-        background-color: #333;
+        background-color: #33333300;
         margin-left: 45%;
         cursor: pointer;
     }
@@ -675,7 +681,27 @@ p {
 }
 
 .software-services p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.video-editing-section{
+    background-color: #252627;
+}
+
+.video-editing-header{
+    
+}
+
+.video-editing-tools {
+    
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.tool img{
+    width: 25%; /* Ocupa el 80% del ancho disponible en pantallas más pequeñas */
 }
     
 }
